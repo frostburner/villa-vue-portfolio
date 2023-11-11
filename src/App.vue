@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AboutComponent from "./components/AboutComponent.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 import TestComponent from "./components/TestComponent.vue";
 </script>
@@ -7,7 +8,7 @@ import TestComponent from "./components/TestComponent.vue";
   <div>
 
     <TestComponent />
-  
+    <AboutComponent />
   </div>
 
 </template>
