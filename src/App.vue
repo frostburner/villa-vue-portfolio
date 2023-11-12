@@ -1,19 +1,25 @@
 <script setup lang="ts">
 import AboutComponent from "./components/AboutComponent.vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import SkillsComponent from "./components/SkillsComponent.vue";
 import TestComponent from "./components/TestComponent.vue";
 </script>
 
 <template>
   <div>
 
-    <TestComponent />
-    <AboutComponent />
+    <TestComponent  id="test"/>
+    <AboutComponent id="about"/>
+    <SkillsComponent id="skills" />
   </div>
 
 </template>
 
 <style scoped>
+:root, html, body {
+
+scroll-behavior:smooth;
+}
 .logo {
   height: 6em;
   padding: 1.5em;

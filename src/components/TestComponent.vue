@@ -3,7 +3,6 @@
 import image from "../../src/assets/img/img2.png";
 import logo from "../assets/img/logo-portfolio.svg";
 
-
   
 </script>
 
@@ -16,8 +15,8 @@ import logo from "../assets/img/logo-portfolio.svg";
             </div>
 
             <div class="navButtons">
-                <p><a href="#home">Home</a></p>
-                <p><a href="#about">About</a></p>
+                <a onclick="window.location.href='#home'">Home</a>
+                <a onclick="window.location.href='#about'">About</a>
                 <p>Projects</p>
                 <p>Skills</p>
             </div>
@@ -104,6 +103,6 @@ import logo from "../assets/img/logo-portfolio.svg";
     @apply text-gray-50 flex space-x-6 mr-12;
 }
 
-.navButtons>p {
+.navButtons>a{
     @apply hover:text-primary active:text-gray-50 cursor-pointer;
 }</style>

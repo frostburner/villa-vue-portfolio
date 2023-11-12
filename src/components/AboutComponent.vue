@@ -1,5 +1,6 @@
 <script setup lang = "ts">
 import me from "../assets/img/me.jpg"
+import bg from ""
 </script>
 
 <template>
@@ -43,9 +44,11 @@ import me from "../assets/img/me.jpg"
 </template>
 
 <style scoped>
+
 .body{
-    @apply bg-zinc-900 max-h-full flex  
-}
+    @apply bg-zinc-900 max-h-full flex 
+    }
+
 .about{
     @apply  ml-40 py-9 min-w-[35%]
 }
@@ -69,4 +72,5 @@ import me from "../assets/img/me.jpg"
 .me{
     @apply  w-[75%] rounded-tl-[10px] rounded-br-[10px] border-4 border-primary
 }
+
 </style>
