@@ -11,7 +11,7 @@ import { Icon } from "@iconify/vue";
       </div>
       <div class="skillsDesc">
         <div class="textDecorPrimary">
-          <p>&lt;skills&gt;</p>
+          <p>&lt;projects&gt;</p>
         </div>
 
         <p class="text">
@@ -60,7 +60,7 @@ import { Icon } from "@iconify/vue";
         </div>
 
         <div class="textDecorPrimary">
-          <p>&lt;/skills&gt;</p>
+          <p>&lt;/projects&gt;</p>
         </div>
       </div>
     </div>

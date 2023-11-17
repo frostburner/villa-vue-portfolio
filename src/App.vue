@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AboutComponent from "./components/AboutComponent.vue";
 import HelloWorld from "./components/HelloWorld.vue";
+import ProjectsComponent from "./components/ProjectsComponent.vue";
 import SkillsComponent from "./components/SkillsComponent.vue";
 import TestComponent from "./components/TestComponent.vue";
 
@@ -12,6 +13,7 @@ import TestComponent from "./components/TestComponent.vue";
     <TestComponent  id="test"/>
     <AboutComponent id="about"/>
     <SkillsComponent id="skills" />
+    <ProjectsComponent id="projects" />
   </div>
 
 </template>
