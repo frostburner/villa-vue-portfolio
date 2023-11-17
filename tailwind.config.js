@@ -11,6 +11,7 @@ module.exports = {
         "secondary" : "#f6f6f6",
         "default" : "#454545",
         "neutral" : "#262626",
+      
         
       },
     },

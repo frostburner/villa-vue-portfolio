@@ -3,6 +3,7 @@ import AboutComponent from "./components/AboutComponent.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 import SkillsComponent from "./components/SkillsComponent.vue";
 import TestComponent from "./components/TestComponent.vue";
+
 </script>
 
 <template>

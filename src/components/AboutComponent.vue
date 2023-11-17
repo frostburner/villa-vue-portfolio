@@ -1,6 +1,7 @@
 <script setup lang = "ts">
 import me from "../assets/img/me.jpg"
-import bg from ""
+
+
 </script>
 
 <template>
