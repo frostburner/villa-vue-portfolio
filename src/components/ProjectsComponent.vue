@@ -7,57 +7,17 @@ import { Icon } from "@iconify/vue";
   <div class="body">
     <div class="skills">
       <div class="skillsTitle">
-        <h1>Skills</h1>
+        <h1>Projects</h1>
       </div>
+
       <div class="skillsDesc">
         <div class="textDecorPrimary">
           <p>&lt;projects&gt;</p>
         </div>
+          
 
-        <p class="text">
-          I am always striving to never stop learning and improving
-        </p>
 
-        <div class="skillsBoxHolder">
-          <div class="rectangle">
-            <Icon
-              icon="icon-park-outline:computer"
-              color="#020617"
-              width="32"
-              display="flex"
-              justify-content="center"
-              m
-            />
-            <p class="rectangleText">Web Development</p>
-          </div>
-
-          <div class="rectangle">
-            <Icon icon="ph:figma-logo" color="#020617" width="32" display="flex" />
-            <p class="rectangleText">UI/UX</p>
-          </div>
-        </div>
-
-        <div class="skillsIconsHolder">
-          <div class="skillsDiv">
-            <Icon icon="vscode-icons:file-type-html" width="96" />
-            <p>HTML</p>
-          </div>
-
-          <div class="skillsDiv">
-            <Icon icon="vscode-icons:file-type-css" width="96" />
-            <p>CSS</p>
-          </div>
-
-          <div class="skillsDiv">
-            <Icon icon="vscode-icons:file-type-vue" width="96" />
-            <p>Vue</p>
-          </div>
-
-          <div class="skillsDiv">
-            <Icon icon="vscode-icons:file-type-reactjs" width="96" />
-            <p>React</p>
-          </div>
-        </div>
+        
 
         <div class="textDecorPrimary">
           <p>&lt;/projects&gt;</p>

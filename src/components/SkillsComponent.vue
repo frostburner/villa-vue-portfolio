@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { Icon } from "@iconify/vue";
 </script>
 
@@ -18,26 +17,37 @@ import { Icon } from "@iconify/vue";
           I am always striving to never stop learning and improving
         </p>
 
-        <div class="skillsBoxHolder">
-          <div class="rectangle">
-            <Icon
-              icon="icon-park-outline:computer"
-              color="#020617"
-              width="32"
-              display="flex"
-              justify-content="center"
-              m
-            />
-            <p class="rectangleText">Web Development</p>
-          </div>
+      <div class="skillsBoxHolder">
 
-          <div class="rectangle">
-            <Icon icon="ph:figma-logo" color="#020617" width="32" display="flex" />
-            <p class="rectangleText">UI/UX</p>
-          </div>
-        </div>
+        <v-card class="card">
+          <v-card-item>
+            <Icon icon="mdi:desktop-mac" width="40" />
+        <v-card-title>Web Development</v-card-title>
+
+        <v-card-subtitle>HTML-CSS-JS-React</v-card-subtitle>
+        </v-card-item>
+
+      <!-- <v-card-text> This is content </v-card-text> -->
+        </v-card>
+
+        <v-card class="card">
+          <v-card-item>
+            <Icon icon="ph:figma-logo" width="40" />
+        <v-card-title>UI/UX</v-card-title>
+
+        <v-card-subtitle>Figma-Photoshop</v-card-subtitle>
+        </v-card-item>
+
+      <!-- <v-card-text> This is content </v-card-text> -->
+        </v-card>
+
+    </div>
+
+
+
 
         <div class="skillsIconsHolder">
+
           <div class="skillsDiv">
             <Icon icon="vscode-icons:file-type-html" width="96" />
             <p>HTML</p>
@@ -68,6 +78,14 @@ import { Icon } from "@iconify/vue";
 </template>
 
 <style scoped>
+
+.icon{
+  @apply object-top
+}
+
+.card {
+  @apply w-[400px] h-auto bg-cyan-500  flex items-center hover:bg-secondary cursor-pointer
+}
 .body {
   @apply bg-neutral max-h-full flex justify-center;
 }
@@ -109,10 +127,8 @@ import { Icon } from "@iconify/vue";
 }
 
 .rectangle {
-  @apply w-[200px] h-[120px] bg-cyan-400 text-black rounded-lg ;
+  @apply w-[200px] h-[120px] bg-cyan-400 text-black rounded-lg;
 }
-
-
 
 .rectangleText {
   @apply text-center bg-slate-500;

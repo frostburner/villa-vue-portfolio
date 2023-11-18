@@ -17,8 +17,8 @@ import logo from "../assets/img/logo-portfolio.svg";
             <div class="navButtons">
                 <a onclick="window.location.href='#home'">Home</a>
                 <a onclick="window.location.href='#about'">About</a>
+                <a onclick="window.location.href='#skills'">Skills</a>
                 <p>Projects</p>
-                <p>Skills</p>
             </div>
 
         </div>
