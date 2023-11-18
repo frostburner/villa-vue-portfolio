@@ -10,39 +10,99 @@ import { Icon } from "@iconify/vue";
         <h1>Projects</h1>
       </div>
 
-      <div class="skillsDesc">
-        <div class="textDecorPrimary">
+
+<div class="textDecorPrimary">
           <p>&lt;projects&gt;</p>
         </div>
-          
+      <div class="Desc">
+        
+      
+        <div class="cardHolder">
+        <v-card class="card">
+          <v-card-item>
+            <Icon icon="mdi:desktop-mac" width="40" />
+        <v-card-title>Web Apps </v-card-title>
 
+        <v-card-subtitle> 8 Projects</v-card-subtitle>
+        </v-card-item>
+
+      <!-- <v-card-text> This is content </v-card-text> -->
+        </v-card>
+
+        <v-card class="card">
+          <v-card-item>
+            <Icon icon="ph:figma-logo" width="40" />
+        <v-card-title>Wep Designs</v-card-title>
+
+        <v-card-subtitle>13 Projects</v-card-subtitle>
+        </v-card-item>
+
+      <!-- <v-card-text> This is content </v-card-text> -->
+        </v-card>
+        
+        <v-card class="card">
+          <v-card-item>
+            <Icon icon="material-symbols-light:phone-android" width="40" color=""/>
+        <v-card-title>Mobile App Designs</v-card-title>
+
+        <v-card-subtitle>7 Projects</v-card-subtitle>
+        </v-card-item>
+
+      <!-- <v-card-text> This is content </v-card-text> -->
+        </v-card>
 
         
 
+      </div>
+
+      <div class="info">
+        <p> Over my college years, I have created 8 web apps, 13 web design projects, and 7 mobile app designs. I aim to create 
+          and add more as I progress through my web development journey.
+        </p> <br>
+        <p>I explore different tools and libraries for every framework that I work with. I also aim to make the codes I make as clean
+          and efficient as I can. </p> <br>
+        <p> This portfolio is made with simple Vue libraries for icons and components.</p>
+      </div>
+
+
+
+
+</div>
         <div class="textDecorPrimary">
           <p>&lt;/projects&gt;</p>
         </div>
-      </div>
+
+      
     </div>
   </div>
 </template>
 
 <style scoped>
+.info{
+  @apply w-1/2  p-[5%]
+}
+.cardHolder{
+  @apply space-y-4  w-fit
+}
+.card {
+  @apply w-[400px] h-auto bg-cyan-500  flex items-center hover:bg-secondary cursor-pointer
+}
 .body {
-  @apply bg-neutral max-h-full flex justify-center;
+  @apply bg-slate-700 max-h-full flex justify-center w-full;
 }
 
 .skills {
-  @apply m-6;
+  @apply m-6 w-2/3;
 }
 
 .skillsTitle {
   @apply text-gray-50 text-4xl font-semibold text-center text-primary mt-10;
 }
 
-.skillsDesc {
-  @apply text-gray-50 my-5 w-[600px] p-4 rounded-[15px];
+.Desc {
+  @apply text-gray-50 my-5 w-full p-4 rounded-[15px] flex justify-between ;
 }
+
 
 .aboutDesc > h1 {
   @apply text-4xl text-primary;
