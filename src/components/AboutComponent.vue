@@ -29,7 +29,7 @@ import me from "../assets/img/me.jpg"
 
         <p>
             I also have small knowledge about databases like MySQL, PostgreSQL, and MongoDB. Not to mention, I am also studying backend frameworks 
-            like Express and Flask. Test
+            like Express and Flask.
         </p>
     
         <div class="textDecorPrimary">
