@@ -1,72 +1,65 @@
 <script setup lang="ts">
-
-// import { ref, onMounted } from 'vue';
-import image from "../../src/assets/img/img2.png";
+import { ref, onMounted } from 'vue';
+import image from "../assets/img/landing2.png";
 import logo from "../assets/img/logo-portfolio.svg";
 
-// const scrollToTarget = (targetId) => {
-//   const targetElement = document.getElementById(targetId);
-//   if (targetElement) {
-//     window.scrollTo({
-//       top: targetElement.offsetTop,
-//       behavior: 'smooth'
-//     });
-//   }
-// };
+const scrollToTarget = (targetId: string) => {
+  const targetElement = document.getElementById(targetId);
+  if (targetElement) {
+    window.scrollTo({
+      top: targetElement.offsetTop,
+      behavior: 'smooth'
+    });
+  }
+};
 
-// const smoothScroll = (e) => {
-//   e.preventDefault();
-//   const targetId = e.target.getAttribute('href').substring(1);
-//   scrollToTarget(targetId);
-// };
+const smoothScroll = (targetId: string) => {
+  scrollToTarget(targetId);
+};
 
-// onMounted(() => {
-//   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//     anchor.addEventListener('click', smoothScroll);
-//   });
-// });
-  
+onMounted(() => {
+  const navLinks = document.querySelectorAll('.navButtons a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = e.target.getAttribute('href').substring(1);
+      smoothScroll(targetId);
+    });
+  });
+});
 </script>
 
 <template>
-    <div class="landingPage">
-        <div class="nav">
-            <div class="logo-holder">
-                <img :src="logo">
-                <!-- <p>Raf.Dev</p> -->
-            </div>
-
-            <div class="navButtons">
-                <a onclick="window.location.href='#home'">Home</a>
-                <a onclick="window.location.href=='#about'">About</a>
-                <a onclick="window.location.href='#skills'">Skills</a>
-                <a onclick="window.location.href='#projects'">Projects</a>
-            </div>
-
-        </div>
-
-        <div class="landingBody">
-            <img class="imgHolder" :src="image">
-
-            <div class="landingIntro">
-                <h1> Portfolio</h1>
-                <div class="textDecorPrimary">
-                    <p>{{ "<hello>" }}</p>
-                </div>
-                <p>Hi, <br> My name is Raf, <br> a Web Developer</p>
-                <div class="textDecorPrimary">
-                    <p>{{ "</hello>" }}</p>
-                </div>
-                <p>I am currently a 4th year IT student in La Consolacion College - Bacolod</p>
-                <div class="moreInfo">
-                   <a onclick="window.location.href='#contacts'"> Let's Talk</a>
-                </div>
-
-            </div>
-            
-
-        </div>
+  <div class="landingPage">
+    <div class="nav">
+      <div class="logo-holder">
+        <img :src="logo" alt="Logo">
+      </div>
+      <div class="navButtons">
+        <a @click="smoothScroll('home')">Home</a>
+        <a @click="smoothScroll('about')">About</a>
+        <a @click="smoothScroll('skills')">Skills</a>
+        <a @click="smoothScroll('projects')">Projects</a>
+      </div>
     </div>
+    <div class="landingBody">
+      <img class="imgHolder" :src="image" alt="Landing Image">
+      <div class="landingIntro">
+        <h1>Portfolio</h1>
+        <div class="textDecorPrimary">
+          <p>{{ "<hello>" }}</p>
+        </div>
+        <p>Hi,<br>My name is Raf,<br>a Web Developer</p>
+        <div class="textDecorPrimary">
+          <p>{{ "</hello>" }}</p>
+        </div>
+        <p>I am currently a 4th year IT student at La Consolacion College - Bacolod</p>
+        <div class="moreInfo">
+          <a @click="smoothScroll('contacts')">Let's Talk</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -99,7 +92,7 @@ import logo from "../assets/img/logo-portfolio.svg";
 }
 
 .imgHolder {
-    @apply w-[35%] mx-10 border-4  rounded-tl-[50%] rounded-br-[50%] drop-shadow-2xl;
+    @apply w-[35%] mx-10;
 }
 
 .nav {

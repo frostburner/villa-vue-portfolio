@@ -23,13 +23,12 @@ import me from "../assets/img/me.jpg"
             and a little bit of JavaScript
         </p><br>
         <p>
-            I also have entry-level knowledge about different frameworks such as React, Angular, ExpresJS, and Vue. Currently, I am studying
-            VueJs and Tailwind for my CSS. 
+            I'm currently delving into Vue.js and honing my skills in Tailwind CSS for styling. Additionally, I possess introductory-level proficiency in various frameworks such as React and Angular. My knowledge extends to databases like MySQL, PostgreSQL, and MongoDB. I'm also exploring backend development with Express.js and Flask.
+
         </p><br>
 
         <p>
-            I also have small knowledge about databases like MySQL, PostgreSQL, and MongoDB. Not to mention, I am also studying backend frameworks 
-            like Express and Flask.
+            I also have small knowledge about the basics of cybersecurity and its tools like NMAP and Wireshark. As well as basics of Ubuntu and Kali Linux.
         </p>
     
         <div class="textDecorPrimary">
@@ -57,7 +56,7 @@ import me from "../assets/img/me.jpg"
     @apply text-gray-50 text-4xl font-semibold  border-2 active:bg-default hover:bg-primary cursor-pointer border-primary h-fit w-[50%] p-10 content-around rounded-tl-[10px] rounded-br-[10px]
 }
 .aboutDesc{
-    @apply text-gray-50 my-10   w-[600px] p-4 rounded-[15px] hover:bg-default active:bg-neutral
+    @apply text-gray-50 my-10   w-[600px] p-4 rounded-[15px] active:bg-neutral
 }
 .aboutDesc>h1{
     @apply text-4xl text-primary
