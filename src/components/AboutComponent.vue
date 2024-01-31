@@ -1,12 +1,12 @@
 <script setup lang = "ts">
-import me from "../assets/img/me.jpg"
 
+import me from "../assets/img/me.jpg"
 
 </script>
 
 <template>
 <div class="body">
-    <div class="about">
+    <div id="about">
     <div class="aboutTitle">
         <h1> About Me </h1>
     </div>
@@ -47,11 +47,10 @@ import me from "../assets/img/me.jpg"
 <style scoped>
 
 .body{
-    @apply bg-zinc-900 max-h-full flex 
+    @apply bg-zinc-900 max-h-full flex pl-40 py-9 min-w-[35%]
     }
-
 .about{
-    @apply  ml-40 py-9 min-w-[35%]
+    @apply   bg-slate-50
 }
 
 .aboutTitle{

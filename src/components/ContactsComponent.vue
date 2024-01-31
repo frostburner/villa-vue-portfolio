@@ -1,84 +1,90 @@
-<script setup lang="ts">
+<script>
 import { Icon } from "@iconify/vue";
+
+
+export default {
+    data: () => ({
+      valid: false,
+      firstname: '',
+      lastname: '',
+      nameRules: [
+        value => {
+          if (value) return true
+
+          return 'Name is required.'
+        },
+        value => {
+          if (value?.length <= 10) return true
+
+          return 'Name must be less than 10 characters.'
+        },
+      ],
+      email: '',
+      emailRules: [
+        value => {
+          if (value) return true
+
+          return 'E-mail is requred.'
+        },
+        value => {
+          if (/.+@.+\..+/.test(value)) return true
+
+          return 'E-mail must be valid.'
+        },
+      ],
+    }),
+  }
+
 </script>
 
 <template>
   <div class="body">
-    <div class="skills">
-      <div class="skillsTitle">
-        <h1>Skills</h1>
-      </div>
-      <div class="skillsDesc">
-        <div class="textDecorPrimary">
-          <p>&lt;skills&gt;</p>
-        </div>
 
-        <p class="text">
-          I am always striving to never stop learning and improving
-        </p>
+    <v-form v-model="valid">
+    <v-container class="form">
+      <v-row>
+        <v-col >
+          <v-text-field
+            v-model="firstname"
+            :rules="nameRules"
+            :counter="10"
+            label="First name"
+            required
+            hide-details
+          ></v-text-field>
+        </v-col>
 
-      <div class="skillsBoxHolder">
+        <v-col >
+          <v-text-field
+            v-model="lastname"
+            :rules="nameRules"
+            :counter="10"
+            label="Last name"
+            hide-details
+            required
+          ></v-text-field>
+        </v-col>
 
-        <v-card class="card">
-          <v-card-item>
-            <Icon icon="mdi:desktop-mac" width="40" />
-        <v-card-title>Web Development</v-card-title>
+        <v-col>
+          <v-text-field
+            v-model="email"
+            :rules="emailRules"
+            label="E-mail"
+            hide-details
+            required
+          ></v-text-field>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-form>
 
-        <v-card-subtitle>HTML-CSS-JS-React</v-card-subtitle>
-        </v-card-item>
-
-      <!-- <v-card-text> This is content </v-card-text> -->
-        </v-card>
-
-        <v-card class="card">
-          <v-card-item>
-            <Icon icon="ph:figma-logo" width="40" />
-        <v-card-title>UI/UX</v-card-title>
-
-        <v-card-subtitle>Figma-Photoshop</v-card-subtitle>
-        </v-card-item>
-
-      <!-- <v-card-text> This is content </v-card-text> -->
-        </v-card>
-
-    </div>
-
-
-
-
-        <div class="skillsIconsHolder">
-
-          <div class="skillsDiv">
-            <Icon icon="vscode-icons:file-type-html" width="96" />
-            <p>HTML</p>
-          </div>
-
-          <div class="skillsDiv">
-            <Icon icon="vscode-icons:file-type-css" width="96" />
-            <p>CSS</p>
-          </div>
-
-          <div class="skillsDiv">
-            <Icon icon="vscode-icons:file-type-vue" width="96" />
-            <p>Vue</p>
-          </div>
-
-          <div class="skillsDiv">
-            <Icon icon="vscode-icons:file-type-reactjs" width="96" />
-            <p>React</p>
-          </div>
-        </div>
-
-        <div class="textDecorPrimary">
-          <p>&lt;/skills&gt;</p>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <style scoped>
-
+.form{
+  @apply w-full
+}
 .icon{
   @apply object-top
 }
@@ -86,8 +92,9 @@ import { Icon } from "@iconify/vue";
 .card {
   @apply w-[400px] h-auto bg-cyan-500  flex items-center hover:bg-secondary cursor-pointer
 }
+
 .body {
-  @apply bg-neutral max-h-full flex justify-center;
+  @apply bg-neutral max-h-full flex w-full;
 }
 
 .skills {

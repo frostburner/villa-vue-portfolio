@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import AboutComponent from "./components/AboutComponent.vue";
+import ContactsComponent from "./components/ContactsComponent.vue";
 import HelloWorld from "./components/HelloWorld.vue";
 import ProjectsComponent from "./components/ProjectsComponent.vue";
 import SkillsComponent from "./components/SkillsComponent.vue";
@@ -14,14 +15,18 @@ import TestComponent from "./components/TestComponent.vue";
     <AboutComponent id="about"/>
     <SkillsComponent id="skills" />
     <ProjectsComponent id="projects" />
+   
+    
   </div>
 
 </template>
 
 <style scoped>
-:root, html, body {
 
-scroll-behavior:smooth;
+:root, html, body {
+scroll-behavior: smooth;
+scroll-padding: 10rem;
+
 }
 .logo {
   height: 6em;

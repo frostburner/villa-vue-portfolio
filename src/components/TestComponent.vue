@@ -1,8 +1,30 @@
 <script setup lang="ts">
 
+// import { ref, onMounted } from 'vue';
 import image from "../../src/assets/img/img2.png";
 import logo from "../assets/img/logo-portfolio.svg";
 
+// const scrollToTarget = (targetId) => {
+//   const targetElement = document.getElementById(targetId);
+//   if (targetElement) {
+//     window.scrollTo({
+//       top: targetElement.offsetTop,
+//       behavior: 'smooth'
+//     });
+//   }
+// };
+
+// const smoothScroll = (e) => {
+//   e.preventDefault();
+//   const targetId = e.target.getAttribute('href').substring(1);
+//   scrollToTarget(targetId);
+// };
+
+// onMounted(() => {
+//   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//     anchor.addEventListener('click', smoothScroll);
+//   });
+// });
   
 </script>
 
@@ -16,7 +38,7 @@ import logo from "../assets/img/logo-portfolio.svg";
 
             <div class="navButtons">
                 <a onclick="window.location.href='#home'">Home</a>
-                <a onclick="window.location.href='#about'">About</a>
+                <a onclick="window.location.href=='#about'">About</a>
                 <a onclick="window.location.href='#skills'">Skills</a>
                 <a onclick="window.location.href='#projects'">Projects</a>
             </div>
@@ -37,7 +59,7 @@ import logo from "../assets/img/logo-portfolio.svg";
                 </div>
                 <p>I am currently a 4th year IT student in La Consolacion College - Bacolod</p>
                 <div class="moreInfo">
-                    <p> Let's Talk </p>
+                   <a onclick="window.location.href='#contacts'"> Let's Talk</a>
                 </div>
 
             </div>
@@ -77,7 +99,7 @@ import logo from "../assets/img/logo-portfolio.svg";
 }
 
 .imgHolder {
-    @apply w-[35%] mx-10 border-4 border-primary rounded-tl-[50%] rounded-br-[50%] drop-shadow-2xl;
+    @apply w-[35%] mx-10 border-4  rounded-tl-[50%] rounded-br-[50%] drop-shadow-2xl;
 }
 
 .nav {
@@ -100,9 +122,9 @@ import logo from "../assets/img/logo-portfolio.svg";
     @apply 
 } */
 .navButtons {
-    @apply text-gray-50 flex space-x-6 mr-12;
+    @apply scroll-smooth text-gray-50 flex space-x-6 mr-12 ;
 }
 
 .navButtons>a{
-    @apply hover:text-primary active:text-gray-50 cursor-pointer;
+    @apply hover:text-primary active:text-gray-50 cursor-pointer ;
 }</style>
